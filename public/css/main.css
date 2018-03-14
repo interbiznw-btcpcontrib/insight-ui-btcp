@@ -243,7 +243,8 @@ navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
 
 .insight {
   background-image: url('../img/btcpLogoWhite.png');
-  background-size: 120px;
+  background-size: 150px;
+  background-position-x: 20px;
   background-repeat: no-repeat;
   font-family: 'Ubuntu', sans-serif;
   font-size: 34px;
