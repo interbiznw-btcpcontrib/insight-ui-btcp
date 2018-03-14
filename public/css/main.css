@@ -341,7 +341,7 @@ navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
   width: auto;
 }
 
-: .col-gray-fixed {
+.col-gray-fixed {
   margin-top: 15px;
   position: fixed !important;
   width: 250px !important;
