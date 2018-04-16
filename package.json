@@ -4,7 +4,7 @@
   "version": "0.4.0-btcp",
   "repository": {
     "type": "git",
-    "url": "git://github.com/interbiznw-btcpcontrib/insight-ui-btcp.git"
+    "url": "git://github.com/BTCPrivate/insight-ui-btcp.git"
   },
   "contributors": [
     {
@@ -37,9 +37,9 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/interbiznw-btcpcontrib/insight-ui-btcp/issues"
+    "url": "https://github.com/BTCPrivate/insight-ui-btcp/issues"
   },
-  "homepage": "https://github.com/interbiznw-btcpcontrib/insight-ui-btcp",
+  "homepage": "https://github.com/BTCPrivate/insight-ui-btcp",
   "license": "MIT",
   "keywords": [
     "insight",
