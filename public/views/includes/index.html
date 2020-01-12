@@ -1,0 +1,124 @@
+<div class="alert alert-danger" data-ng-show="flashMessage">
+  {{$root.flashMessage}}
+</div>
+<div data-ng-include src="'views/includes/connection.html'"></div>
+<section data-ng-controller="IndexController" data-ng-init="index()">
+    
+<!--
+    
+     <div class="row">
+      <div id="search-form-mobile" class="visible-xs" data-ng-include src="'views/includes/search.html'"></div>
+      <section class="background-image-holder fadeIn container-fluid" style='transform: translate3d(0px, -7px, 0px); background-color: transparent; background-image: url("https://dl.airtable.com/nssPc29PRHS4hkpFy3nM_full_Reddit.png"); background-repeat: repeat; background-attachment: scroll; background-clip: border-box; background-origin: padding-box; background-position: initial; background-size: auto auto; top: -55px;   padding-top:100px; padding-bottom:100px; width:2500px; height:300px; margin-left: -750px;'>
+      
+         <div class="container">
+            <h1><p style="text-align: center;">Bitcoin Private Explorer</p></h1>
+            <span style="color: black" data-ng-include src="'views/includes/search.html '"></span>
+         </div>
+      </section>
+-->
+    
+    
+    <div class="jumbotron" style="background-image:url('https://dl.airtable.com/nssPc29PRHS4hkpFy3nM_full_Reddit.png');">
+  <div class="container inner-margin-top">
+    <div class="row">
+      <div class="col-md-12 col-sm-12" style="text-align:center">
+        <br/>
+        <h2 class="inner-header">Bitcoin Private Explorer</h2>
+          <br/>
+        <!--<p class="inner-header">Search for Block, Transaction or address</p>-->
+        <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 search-margin-top">
+          <div class="global-search" itemscope="" itemtype="http://schema.org/WebSite">
+          	<meta itemprop="url" content="/">
+            <span style="color: black" data-ng-include src="'views/includes/search.html '"></span>
+          </div>
+            <br/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+         
+         
+         
+    
+         
+         
+    
+    
+
+   
+    
+    
+    
+  <div class="container">
+    <div id="home" class="row">
+      <div class="col-xs-12 col-md-8">
+
+        <div id="search-form-mobile" class="visible-xs" data-ng-include src="'views/includes/search.html'"></div>
+
+        <h1 translate>Latest Blocks</h1>
+        <table class="table table-hover table-striped" style="table-layout: fixed">
+          <thead>
+            <tr>
+              <th translate>Height</th>
+              <th translate>Age</th>
+              <th class="text-right"><span class="ellipsis" translate>Transactions</span></th>
+              <th class="text-right hidden-xs"><span class="ellipsis" translate>Mined by</span></th>
+              <th class="text-right" translate>Size</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-show="!blocks.length"><td colspan="4" translate>Waiting for blocks...</td></tr>
+          <tr class="fader" data-ng-repeat='b in blocks'>
+            <td>
+              <a href="block/{{b.hash}}">{{b.height}}</a>
+            </td>
+            <td><span class="ellipsis">{{humanSince(b.time)}}</span></td>
+            <td class="text-right">{{b.txlength}}</td>
+            <td class="text-right hidden-xs"><a href="{{b.poolInfo.url}}" title="{{b.poolInfo.poolName}}" target="_blank" data-ng-show="b.poolInfo">{{b.poolInfo.poolName}}</a></td>
+            <td class="text-right">{{b.size}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <div class="btn-more">
+          <a href="blocks" class="btn btn-default" translate>See all blocks</a>
+        </div>
+
+        <h2 translate>Latest Transactions</h2>
+
+        <table class="table table-hover table-striped" style="table-layout: fixed;">
+          <thead>
+            <tr>
+              <th>Hash</th>
+              <th class="text-right" translate>Value Out</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-show="!txs.length"><td colspan="3" translate>Waiting for transactions...</td></tr>
+          <tr class="fader" data-ng-repeat='tx in txs'>
+            <td>
+              <a class="ellipsis" href="tx/{{tx.txid}}">{{tx.txid}}</a>
+            </td>
+            <td class="text-right"><span class="ellipsis">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' BTC'}}</span></td>
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+        
+      <div class="col-xs-12 col-md-4 col-gray">
+          
+
+          
+          
+          
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique tincidunt urna. Morbi dignissim purus quis scelerisque interdum. Donec et libero nec lacus commodo pharetra. Duis sit amet velit pretium, rutrum neque et, commodo libero. Quisque tristique accumsan erat, fermentum porttitor magna euismod att.</p>
+          <a href="https://btcprivate.org"><p style="text-align:center"><img src="./img/btcpLogo.png" target="_blank"/></p></a>
+        
+        
+      </div> <!-- END OF COL-3 -->
+    </div>
+  </div>
+</section>
